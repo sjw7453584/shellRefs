@@ -1,0 +1,80 @@
+List of Special Characters and Their Meanings
+Character	Where	Meaning
+ESC	csh	Filename completion.
+RETURN	csh, sh	Execute command.
+space	csh, sh	Argument separator.
+TAB	csh, sh	Argument separator.
+TAB	bash	Filename completion.
+#	csh, sh	Start a comment.
+`	csh, sh	Command substitution (backquotes).
+"	csh, sh	Weak quotes.
+'	csh, sh	Strong quotes.
+\	csh, sh	Single?character quote.
+$var	csh, sh	Variable.
+${var}	csh, sh	Same as $var.
+$var:mod	csh	Edit var with modifier mod
+${var?default}	sh	If var not set, use default.
+${var=default}	sh	If var not set, set it to default and use that value.
+${var+instead}	sh	If var set, use instead. Otherwise, null string.
+${var?message}	sh	If var not set, print message (else default). If var set, use its value.
+${var#pat}	ksh, bash	Value of var with smallest pat deleted from start.
+${var##pat}	ksh, bash	Value of var with largest pat deleted from start.
+${var%pat}	ksh, bash	Value of var with smallest pat deleted from end.
+${var%%pat}	ksh, bash	Value of var with largest pat deleted from end.
+|	csh, sh	Pipe standard output.
+|&	csh	Pipe standard output and standard error.
+^	sh	Pipe character (obsolete).
+^	csh, bash	Edit previous command line.
+&	csh, sh	Run program in background.
+?	csh, sh	Match one character.
+*	csh, sh	Match zero or more characters.
+;	csh, sh	Command separator.
+;;	sh	[/td]End of case statement.[/tr]
+~	csh, ksh, bash	Home directory.
+~user	csh, ksh, bash	Home directory of user.
+!	csh, bash	Command history.
+-	Programs	Start of optional argument.
+-	Programs	Read standard input. (Only certain programs.)
+$#	csh, sh	Number of arguments to script.
+"$@"	sh	Original arguments to script.
+$*	csh, sh	Arguments to script.
+$-	sh	Flags set in shell.
+$?	sh	Status of previous command.
+$$	csh, sh	Process identification number.
+$!	sh	Process identification number of last background job.
+$<	csh	Read input from terminal.
+cmd1 && cmd2	csh, sh	Execute cmd2 if cmd1 succeeds.
+cmd1 || cmd2	csh, sh	Execute cmd2 if cmd1 succeeds.
+$(..)	ksh, bash	Command substitution.
+((..))	ksh, bash	Arithmetic evaluation.
+\. file	sh	Execute commands from file in this shell.
+:	sh	Evaluate arguments, return true.
+:	sh	Separate values in paths.
+:	csh	Variable modifier.
+[]	csh, sh	Match range of characters.
+[]	sh	Test.
+%job	csh, ksh, bash	Identify job number.
+(cmd;cmd)	csh, sh	Run cmd;cmd in a subshell.
+{}	csh, bash	In?line expansions.
+{cmd;cmd;}	sh	Like (cmd;cmd) without a subshell.
+>file	csh, sh	Redirect standard output.
+>>file	csh, sh	Append standard output.
+<file	csh, sh	Redirect standard input.
+<<word	csh, sh	Read until word, do command and variable substitution.
+<<\word	csh, sh	Read until word, no substitution.
+<?word	sh	Read until word, ignoring leading TABs.
+>>! file	csh, sh	Append to file, even if noclobber set and file doesn't exist.
+>! file	csh	Output to file, even if noclobber set and file exists.
+>| file	ksh, bash	Output to file, even if noclobber set and file exists.
+>& file	csh	Redirect standard output and standard error to file.
+m> file	sh	Redirect output file descriptor m to file.
+m>> file	sh	Append output file descriptor m to file.
+m< file	sh	Redirect input file descriptor m from file.
+<&m	sh	Take standard input from file descriptor m.
+<&?	sh	Close standard input.
+>&m	sh	Use file descriptor m as standard output.
+>&-	sh	Close standard output.
+m<&n	sh	Connect input file descriptor n to file descriptor m.
+m<&-	sh	Close input file descriptor m.
+n>&m	sh	Connect output file descriptor n to file descriptor m.
+m>&-	sh	Close output file descriptor m.
